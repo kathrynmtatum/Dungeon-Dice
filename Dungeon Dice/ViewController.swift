@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var diceMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        diceMessage.text = ""
     }
 
-
+    @IBAction func dicePressed(_ sender: UIButton) {
+        let dicePressed = Int.random(in: 1...sender.tag)
+        diceMessage.text = "You rolled a \(dicePressed) on a \(sender.tag)-sided dice"
+    }
+    
 }
 

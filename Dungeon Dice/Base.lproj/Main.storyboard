@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,107 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dungeon_Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Dice to Roll:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFW-g2-WiN">
+                                <rect key="frame" x="85" y="206" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-OI-4Ha">
+                                <rect key="frame" x="14" y="248" width="54" height="30"/>
+                                <state key="normal" title="4-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Sj-Df-Wtm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVP-RF-5MF">
+                                <rect key="frame" x="11" y="286" width="61" height="30"/>
+                                <state key="normal" title="10-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9x-Ks-chM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vts-xj-FQI">
+                                <rect key="frame" x="127" y="331" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="100-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJr-Af-W9C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-ho-qLb">
+                                <rect key="frame" x="132" y="287" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="12-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="To4-Cm-Mu2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58p-nG-9TU">
+                                <rect key="frame" x="135" y="248" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="6-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPW-J6-JY4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-mv-KMn">
+                                <rect key="frame" x="241" y="288" width="63" height="30"/>
+                                <state key="normal" title="20-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06t-iS-Uiq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzV-XO-3dH">
+                                <rect key="frame" x="245" y="248" width="54" height="30"/>
+                                <state key="normal" title="8-sided"/>
+                                <connections>
+                                    <action selector="dicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5od-Nz-iM4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeon Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-7v-jMO">
+                                <rect key="frame" x="84" y="13" width="152" height="32"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                                <color key="textColor" red="0.4968672395" green="0.1185845658" blue="0.086246751250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Og-nx-qyH">
+                                <rect key="frame" x="14" y="77" width="292" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e8Z-OI-4Ha" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="7Up-e9-NEl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Md-7v-jMO" secondAttribute="trailing" constant="84" id="8t3-b5-sS2"/>
+                            <constraint firstItem="VVP-RF-5MF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="286" id="JFl-Yr-DBU"/>
+                            <constraint firstItem="8Md-7v-jMO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="MbL-Da-jyy"/>
+                            <constraint firstItem="VVP-RF-5MF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="TfC-3l-200"/>
+                            <constraint firstItem="mzV-XO-3dH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="248" id="Xw0-dK-KJl"/>
+                            <constraint firstItem="e8Z-OI-4Ha" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="248" id="YjE-Ac-PaD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qVe-mv-KMn" secondAttribute="trailing" constant="16" id="dgJ-y7-ZBJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mzV-XO-3dH" secondAttribute="trailing" constant="21" id="j8A-dv-slm"/>
+                            <constraint firstItem="8Md-7v-jMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="lO0-mD-tAP"/>
+                            <constraint firstItem="qVe-mv-KMn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="288" id="xIs-Yo-Fa0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="diceMessage" destination="4Og-nx-qyH" id="vWK-yI-ae0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="8.4507042253521121"/>
         </scene>
     </scenes>
 </document>
